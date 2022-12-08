@@ -1,0 +1,105 @@
+.trainer-card {
+  position: relative;
+  width: 100%;
+  padding-top: 113.07%;
+}
+
+.trainer-card h3 {
+  margin: 0;
+  position: absolute;
+  bottom: 23px;
+  left: 0;
+  font-family: $ff-roboto;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 27px;
+  color: $color-default-white;
+  text-align: center;
+  width: 100%;
+}
+
+.trainer-card img {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  object-fit: cover;
+  object-position: top;
+}
+
+.trainer-card__content-wrapper {
+  display: none;
+}
+
+.trainer-card__content-wrapper ul {
+  margin: 0;
+  padding: 0 0 0 71px;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.trainer-card__content-wrapper li {
+  margin-bottom: 13px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  position: relative;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 7px;
+    left: -16px;
+    width: 6px;
+    height: 6px;
+    background-color: $color-default-white;
+    border-radius: 50%;
+
+  }
+}
+
+.trainer-card__content-wrapper span {
+  color: $color-spindle;
+  margin-bottom: 34px;
+}
+
+// Поведение при наведении
+
+.trainer-card:hover {
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(16, 38, 84, 0.89);
+    display: flex;
+    z-index: 0;
+  }
+}
+
+.trainer-card:hover h3 {
+  top: 51px;
+  z-index: 10;
+}
+
+.trainer-card:hover img {
+  transform: matrix(-1, 0, 0, 1, 0, 0);
+}
+
+.trainer-card:hover .trainer-card__content-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: 74px;
+  z-index: 10;
+  color: $color-default-white;
+}

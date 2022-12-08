@@ -37,7 +37,7 @@
           <div class="main-block__wrapper container">
             <div class="main-block__content-wrapper">
               <p class="main-block__city">омск</p>
-              <h1 class="main-block__title">Фитнес центр</h1>
+              <h1 class="main-block__title" data-main-title>ФИТНЕС ЦЕНТР</h1>
               <ul class="main-block__workout-list">
                 <li class="main-block__workout-item">
                   Тренажёрный зал
@@ -57,17 +57,39 @@
 
         <section class="about">
           <div class="about__wrapper container">
-            <div class="about__content-wrapper">
+            <div class="about__text-wrapper">
               <h2 class="about__title">Тренажерный зал</h2>
               <p class="about__subtitle">Просторный зал площадью 900 кв/м</p>
-              <div class="about__text-wrapper">
-                <p class="about__text">Supergym&nbsp;&mdash; самый большой фитнес центр за&nbsp;Уралом и&nbsp;идеальное место для укрепления тела и&nbsp;здоровья. Тренажерный зал оснащен всем необходимым современным оборудованием для всех спортсменов.</p>
-                <p class="about__text about__text--hidden">В&nbsp;зале расположены отдельная зона для Crossfit и&nbsp;кардио-зона с&nbsp;40&nbsp;тренажерами. Также в&nbsp;фитнес центре есть несколько оборудованных залов для различных видов групповых занятий.</p>
-              </div>
+              <p class="about__text">Supergym&nbsp;&mdash; самый большой фитнес центр за&nbsp;Уралом и&nbsp;идеальное место для укрепления тела и&nbsp;здоровья. Тренажерный зал оснащен всем необходимым современным оборудованием для всех спортсменов.</p>
+              <p class="about__text about__text--hidden">В&nbsp;зале расположены отдельная зона для Crossfit и&nbsp;кардио-зона с&nbsp;40&nbsp;тренажерами. Также в&nbsp;фитнес центре есть несколько оборудованных залов для различных видов групповых занятий.</p>
             </div>
-            <img class="about__image" src="./img/gym.webp" srcset="./img/gym@2x.webp" alt="Наш тренажерный зал" width="660" height="401">
-            <div class="about__video">
-              <iframe width="364" height="228" src="https://www.youtube.com/embed/9TZXsZItgdw" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <div class="about__media-wrapper">
+              <img class="about__image" src="./img/gym.webp" srcset="./img/gym@2x.webp" alt="Наш тренажерный зал" width="660" height="401">
+              <div class="about__video-wrapper">
+                <div class="about__video video is-enebled" data-video>
+                  <a class="video__link" href="https://www.youtube.com/embed/9TZXsZItgdw" data-video-link>
+                    <img class="video__media" src="./img/video/video-cover.webp" srcset="./img/video/video-cover@2x.webp" alt="Обзор тренажерного зала" data-video-media>
+                  </a>
+                  <button class="video__button" aria-label="Запустить видео" data-video-button>
+                    <svg class="video__icon" width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <circle class="video__icon-circle-big" cx="50" cy="50" r="49" stroke="url(#paint0_linear_7653_167)" stroke-opacity="0.2" stroke-width="2"/>
+                      <circle class="video__icon-circle-small" cx="50" cy="50" r="36" fill="url(#paint1_linear_7653_167)"/>
+                      <path d="M59 49.5L46.25 56.8612L46.25 42.1388L59 49.5Z" fill="white"/>
+                      <defs>
+                      <linearGradient id="paint0_linear_7653_167" x1="19.774" y1="3.00672e-05" x2="105.785" y2="10.6444" gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#ED0233" offset="0"/>
+                        <stop offset="1" stop-color="#003EB7"/>
+                      </linearGradient>
+                      <linearGradient id="paint1_linear_7653_167" x1="14" y1="49.52" x2="54.1858" y2="9.18415" gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#003D85" offset="0"/>
+                        <stop offset="0.885417" stop-color="#B80027"/>
+                      </linearGradient>
+                      </defs>
+                    </svg>
+                  </button>
+                </div>
+
+              </div>
             </div>
           </div>
         </section>
@@ -78,128 +100,111 @@
           </a>
           <div class="subscription__wrapper container">
             <h2 class="subscription__title">Абонементы</h2>
-            <ul class="subscription__prise-list tubs">
-
-              <li class="tubs__item is-active" data-tubs-item>
-                <h3 class="tubs__title">1 месяц</h3>
-                <ul class="tubs__inner-list">
-                  <li class="tubs__inner-list-item">
-                    <h4>С тренером</h4>
-                    <span>12 занятий</span>
-                    <b>5000</b>
-                    <svg width="30" height="42" role="img" aria-label="рублей">
-                      <use xlink:href="img/sprite.svg#rubble"></use>
-                    </svg>
-                    <a href="#">купить абонемент</a>
+            <div class="subscription__tubs tubs">
+              <nav class="tubs__nav">
+                <ul class="tubs__title-list">
+                  <li class="tubs__title is-active is-nojs" data-tubs-title>
+                    <a href="#tubs-first">1 месяц</a>
                   </li>
-                  <li class="tubs__inner-list-item">
-                    <h4>Дневной</h4>
-                    <span>с 8:00 до 17:00</span>
-                    <b>1700</b>
-                    <svg width="30" height="42" role="img" aria-label="рублей">
-                      <use xlink:href="img/sprite.svg#rubble"></use>
-                    </svg>
-                    <a href="#">купить абонемент</a>
+                  <li class="tubs__title" data-tubs-title>
+                    <a href="#tubs-second">6 месяцев</a>
                   </li>
-                  <li class="tubs__inner-list-item">
-                    <h4>Полный день</h4>
-                    <span>с 8:00 до 22:00 </span>
-                    <b>2700</b>
-                    <svg width="30" height="42" role="img" aria-label="рублей">
-                      <use xlink:href="img/sprite.svg#rubble"></use>
-                    </svg>
-                    <a href="#">купить абонемент</a>
+                  <li class="tubs__title" data-tubs-title>
+                    <a href="#tubs-third">12 месяцев</a>
                   </li>
                 </ul>
-              </li>
+              </nav>
 
-              <li class="tubs__item" data-tubs-item>
-                <h3 class="tubs__title">6 месяцев</h3>
-                <ul class="tubs__inner-list">
-                  <li class="tubs__inner-list-item">
-                    <h4>С тренером</h4>
-                    <span>72 занятия</span>
-                    <b>27000</b>
-                    <svg width="30" height="42" role="img" aria-label="рублей">
-                      <use xlink:href="img/sprite.svg#rubble"></use>
-                    </svg>
-                    <a href="#">купить абонемент</a>
-                  </li>
-                  <li class="tubs__inner-list-item">
-                    <h4>Дневной</h4>
-                    <span>с 8:00 до 17:00</span>
-                    <b>9180</b>
-                    <svg width="30" height="42" role="img" aria-label="рублей">
-                      <use xlink:href="img/sprite.svg#rubble"></use>
-                    </svg>
-                    <a href="#">купить абонемент</a>
-                  </li>
-                  <li class="tubs__inner-list-item">
-                    <h4>Полный день</h4>
-                    <span>с 8:00 до 22:00 </span>
-                    <b>14580</b>
-                    <svg width="30" height="42" role="img" aria-label="рублей">
-                      <use xlink:href="img/sprite.svg#rubble"></use>
-                    </svg>
-                    <a href="#">купить абонемент</a>
-                  </li>
-                </ul>
-              </li>
+              <ul class="tubs__content-list is-active is-nojs" data-tubs-list id="tubs-first">
+                <li class="tubs__card card" tabindex="0">
+                  <h3>С тренером</h3>
+                  <span>12 занятий</span>
+                  <p data-price="5000">5000</p>
+                  <a href="#">купить абонемент</a>
+                </li>
+                <li class="tubs__card card" tabindex="0">
+                  <h3>Дневной</h3>
+                  <span>с 8:00 до 17:00</span>
+                  <p data-price="1700">1700</p>
+                  <a href="#">купить абонемент</a>
+                </li>
+                <li class="tubs__card card" tabindex="0">
+                  <h3>Полный день</h3>
+                  <span>с 8:00 до 22:00 </span>
+                  <p data-price="2700">2700</p>
+                  <a href="#">купить абонемент</a>
+                </li>
+              </ul>
 
-              <li class="tubs__item" data-tubs-item>
-                <h3 class="tubs__title">12 месяцев</h3>
-                <ul class="tubs__inner-list">
-                  <li class="tubs__inner-list-item">
-                    <h4>С тренером</h4>
-                    <span>72 занятия</span>
-                    <b>27000</b>
-                    <svg width="30" height="42" role="img" aria-label="рублей">
-                      <use xlink:href="img/sprite.svg#rubble"></use>
-                    </svg>
-                    <a href="#">купить абонемент</a>
-                  </li>
-                  <li class="tubs__inner-list-item">
-                    <h4>Дневной</h4>
-                    <span>с 8:00 до 17:00</span>
-                    <b>9180</b>
-                    <svg width="30" height="42" role="img" aria-label="рублей">
-                      <use xlink:href="img/sprite.svg#rubble"></use>
-                    </svg>
-                    <a href="#">купить абонемент</a>
-                  </li>
-                  <li class="tubs__inner-list-item">
-                    <h4>Полный день</h4>
-                    <span>с 8:00 до 22:00 </span>
-                    <b>14580</b>
-                    <svg width="30" height="42" role="img" aria-label="рублей">
-                      <use xlink:href="img/sprite.svg#rubble"></use>
-                    </svg>
-                    <a href="#">купить абонемент</a>
-                  </li>
-                </ul>
-              </li>
+              <ul class="tubs__content-list is-nojs" data-tubs-list id="tubs-second">
+                <li class="tubs__card card" tabindex="0">
+                  <h3>С тренером</h3>
+                  <span>72 занятия</span>
+                  <p data-price="27000">27000</p>
+                  <a href="#">купить абонемент</a>
+                </li>
+                <li class="tubs__card card" tabindex="0">
+                  <h3>Дневной</h3>
+                  <span>с 8:00 до 17:00</span>
+                  <p data-price="9180">9180</p>
+                  <a href="#">купить абонемент</a>
+                </li>
+                <li class="tubs__card card" tabindex="0">
+                  <h3>Полный день</h3>
+                  <span>с 8:00 до 22:00 </span>
+                  <p data-price="14580">14580</p>
+                  <a href="#">купить абонемент</a>
+                </li>
+              </ul>
 
-            </ul>
+              <ul class="tubs__content-list is-nojs" data-tubs-list id="tubs-third">
+                <li class="tubs__card card" tabindex="0">
+                  <h3>С тренером</h3>
+                  <span>140 занятий</span>
+                  <p data-price="50000">50000</p>
+                  <a href="#">купить абонемент</a>
+                </li>
+                <li class="tubs__card card" tabindex="0">
+                  <h3>Дневной</h3>
+                  <span>с 8:00 до 17:00</span>
+                  <p data-price="17000">17000</p>
+                  <a href="#">купить абонемент</a>
+                </li>
+                <li class="tubs__card card" tabindex="0">
+                  <h3>Полный день</h3>
+                  <span>с 8:00 до 22:00 </span>
+                  <p data-price="25000">25000</p>
+                  <a href="#">купить абонемент</a>
+                </li>
+              </ul>
+            </div >
           </div>
         </section>
 
         <section class="promo">
           <div class="promo__wrapper container">
             <h2 class="visually-hidden">События</h2>
-            <div class="promo__promo-block">
-              <div class="promo__promo-block-content">
-                <p>SUPER GAMES</p>
-                <h3>Ежегодные соревнования по CrossFit</h3>
-                <dl>
-                  <dt>Дата</dt>
-                  <dd><span>7</span> Март 2019</dd>
-
-                  <dt>Время</dt>
-                  <dd>12:00</dd>
-                </dl>
-                <a>заполнить заявку</a>
+            <div class="promo__promo-block-wrapper">
+              <div class="promo__promo-block">
+                <div class="promo__promo-block-content">
+                  <p>SUPER GAMES</p>
+                  <h3>Ежегодные соревнования по CrossFit</h3>
+                  <ul>
+                    <li>
+                      <p>Дата</p>
+                      <b>7</b>
+                      <span>Марта</span>
+                      <span>2019</span>
+                    </li>
+                    <li>
+                      <p>Время</p>
+                      <b>12:00</b>
+                    </li>
+                  </ul>
+                  <a href="#">заполнить заявку</a>
+                </div>
+                <img src="../img/crossFit.webp" srcset="./img/crossFit@2x.webp" alt="Спортсмен на соревнованиях по CrossFit" width="660" height="500">
               </div>
-              <img src="../img/crossFit.webp" srcset="./img/crossFit@2x.webp" alt="Спортсмен на соревнованиях по CrossFit" width="660" height="500">
             </div>
           </div>
         </section>
@@ -211,45 +216,53 @@
           <div class="trainers__wrapper container">
             <h2 class="trainers__title">Тренеры</h2>
             <ul class="trainers__list">
-              <li class="trainers__item">
+              <li class="trainers__item trainer-card">
                 <img src="./img/trainer-anna.webp" srcset="./img/trainer-anna@2x.webp" alt="Тренер Анна Павлова" width="260" height="294">
                 <h3>Анна Павлова</h3>
-                <span>CrossFit</span>
-                <ul>
-                  <li>Certified Level 3 Trainer</li>
-                  <li>Победительница чемпионата России по&nbsp;CrossFit</li>
-                  <li>Опыт — 5 лет</li>
-                </ul>
+                <div class="trainer-card__content-wrapper">
+                  <span>Fitness</span>
+                  <ul>
+                    <li>Certified Level 3 Trainer</li>
+                    <li>Победительница чемпионата России&nbsp;по&nbsp;Fitness</li>
+                    <li>Опыт — 5 лет</li>
+                  </ul>
+                </div>
               </li>
-              <li class="trainers__item">
+              <li class="trainers__item trainer-card">
                 <img src="./img/trainer-alexei.webp" srcset="./img/trainer-alexei@2x.webp" alt="Тренер Алексей Лавров" width="260" height="294">
                 <h3>Алексей Лавров</h3>
-                <span>CrossFit</span>
-                <ul>
-                  <li>Certified Level 3 Trainer</li>
-                  <li>Победитель чемпионата России по&nbsp;CrossFit</li>
-                  <li>Опыт — 4 года</li>
-                </ul>
+                <div class="trainer-card__content-wrapper">
+                  <span>CrossFit</span>
+                  <ul>
+                    <li>Certified Level 3 Trainer</li>
+                    <li>Победитель чемпионата России&nbsp;по&nbsp;CrossFit</li>
+                    <li>Опыт — 4 года</li>
+                  </ul>
+                </div>
               </li>
-              <li class="trainers__item">
+              <li class="trainers__item trainer-card">
                 <img src="./img/trainer-alexander.webp" srcset="./img/trainer-alexander@2x.webp" alt="Тренер Александр Пашков" width="260" height="294">
                 <h3>Александр Пашков</h3>
-                <span>CrossFit</span>
-                <ul>
-                  <li>Certified Level 3 Trainer</li>
-                  <li>Победитель чемпионата России по&nbsp;CrossFit</li>
-                  <li>Опыт — 6 лет</li>
-                </ul>
+                <div class="trainer-card__content-wrapper">
+                  <span>CrossFit</span>
+                  <ul>
+                    <li>Certified Level 3 Trainer</li>
+                    <li>Победитель чемпионата России&nbsp;по&nbsp;CrossFit</li>
+                    <li>Опыт — 6 лет</li>
+                  </ul>
+                </div>
               </li>
-              <li class="trainers__item">
+              <li class="trainers__item trainer-card">
                 <img src="./img/trainer-maria.webp" srcset="./img/trainer-maria@2x.webp" alt="Тренер Мария Кетова" width="260" height="294">
                 <h3>Мария Кетова</h3>
-                <span>CrossFit</span>
-                <ul>
-                  <li>Certified Level 3 Trainer</li>
-                  <li>Победительница чемпионата России по&nbsp;CrossFit</li>
-                  <li>Опыт — 6 лет</li>
-                </ul>
+                <div class="trainer-card__content-wrapper">
+                  <span>CrossFit</span>
+                  <ul>
+                    <li>Certified Level 3 Trainer</li>
+                    <li>Победительница чемпионата России&nbsp;по&nbsp;CrossFit</li>
+                    <li>Опыт — 6 лет</li>
+                  </ul>
+                </div>
               </li>
             </ul>
           </div>
@@ -296,7 +309,7 @@
             <ul class="discounts__list">
               <li class="discounts__item discounts__item--main">
                 <div class="discounts__item-text-container">
-                  <h3>Год <b>4999</b></h3>
+                  <h3>Год <span>4999</span></h3>
                   <p>Безлимитный абонемент в&nbsp;тренажерный зал</p>
                   <a>подробнее</a>
                 </div>

@@ -1,0 +1,69 @@
+.subscription {
+  background-color: $color-ghost-white;
+  min-width: 320px;
+  position: relative;
+  z-index: 1;
+}
+
+.subscription__wrapper {
+  padding: 120px 32px;
+  max-width: 1224px;
+  display: flex;
+  flex-direction: column;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -70px;
+    right: 0;
+    width: 288px;
+    height: 415px;
+    background-image: url('../img/background-layer-dumbbells-desktop.webp');
+    background-repeat: no-repeat;
+    z-index: -1;
+    background-size: cover;
+  }
+
+  @include vp-1199 {
+    padding: 100px 163px;
+
+    &::after {
+      background-image: url('../img/background-layer-dumbbells.webp');
+      bottom: -95px;
+      width: 348px;
+
+      @include retina {
+        background-image: url('../img/background-layer-dumbbells@2x.webp');
+      }
+    }
+  }
+
+  @include vp-767 {
+    padding: 63px 15px 68px;
+
+    &::after {
+      background-image: none;
+    }
+  }
+}
+
+.subscription__title {
+  margin: 0 0 17px;
+  font-family: $ff-alumni;
+  font-weight: 600;
+  font-size: 54px;
+  line-height: 65px;
+  letter-spacing: 0.03em;
+  align-self: center;
+
+  @include vp-1199 {
+    margin: 0 0 20px -13px;
+    font-size: 42px;
+    line-height: 50px;
+  }
+
+  @include vp-767 {
+    font-size: 32px;
+    line-height: 38px;
+  }
+}

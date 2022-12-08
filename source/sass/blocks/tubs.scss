@@ -1,0 +1,140 @@
+.tubs {
+  display: flex;
+  flex-direction: column;
+}
+
+.tubs__nav {
+  display: flex;
+  align-self: center;
+}
+
+.tubs__title-list {
+  display: flex;
+  margin: 0 0 38px;
+  padding: 0;
+  list-style-type: none;
+
+  @include vp-1199 {
+    margin-bottom: 45px;
+  }
+
+  @include vp-767 {
+    margin-bottom: 35px;
+  }
+}
+
+.tubs__title {
+  position: relative;
+  margin: 0;
+  padding-bottom: 13px;
+  font-size: 20px;
+  line-height: 30px;
+  color: rgba(16, 38, 84, 0.5);
+
+
+  &:nth-child(2){
+    padding: 0 46px;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    background-color: rgba(120, 120, 120, 0.2);
+  }
+
+  @include hover {
+    opacity: 0.6;
+  }
+
+  @include vp-1199 {
+    font-size: 18px;
+    line-height: 27px;
+
+
+    &:nth-child(2){
+      padding: 0 54px;
+    }
+  }
+
+  @include vp-767 {
+    font-size: 16px;
+    line-height: 24px;
+    padding-bottom: 15px;
+
+    &:nth-child(2){
+      padding: 0 45px 0 38px;
+    }
+
+    &:nth-child(1){
+      padding-right: 7px;
+    }
+
+  }
+}
+
+.tubs__title.is-active {
+  &::after {
+    background-color: $color-crimson;
+  }
+}
+
+.tubs__title.is-nojs {
+  &::after {
+    background-color: rgba(120, 120, 120, 0.2);
+  }
+}
+
+.tubs__button {
+  background-color: transparent;
+  border: none;
+
+  @include focus {
+    opacity: 0.6;
+    border-radius: 2px;
+    outline: 2px solid $color-crimson;
+  }
+}
+
+.tubs__title.is-active a {
+  color: $color-sapphire;
+}
+
+.tubs__content-list {
+  display: none;
+}
+
+.tubs__content-list.is-active,
+.tubs__content-list.is-nojs {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  width: 100%;
+  justify-items: stretch;
+
+  @include vp-1199 {
+    grid-template-columns: 1fr;
+  }
+
+  @include vp-767 {
+    gap: 35px;
+  }
+}
+
+.tubs__content-list.is-nojs {
+  margin-bottom: 50px;
+  border-bottom: 2px solid $color-crimson;
+  padding-bottom: 50px;
+
+  &:last-of-type {
+    margin-bottom: 0;
+    padding: 0;
+    border: none;
+  }
+}
