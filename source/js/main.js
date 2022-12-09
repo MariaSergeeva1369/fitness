@@ -3,6 +3,8 @@ import {initModals} from './modules/modals/init-modals';
 import {changeTitleText} from './modules/text';
 import {findVideos} from './modules/video';
 import {selectTab, removeNojsClass, tubsContent, tubsTitles} from './modules/tubs';
+import './modules/swiper';
+
 
 // ---------------------------------
 

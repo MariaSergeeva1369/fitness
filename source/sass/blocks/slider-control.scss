@@ -1,0 +1,71 @@
+.slider-control {
+  position: absolute;
+  top: 52%;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+
+  @include vp-1199 {
+    top: 43%;
+    left: 3.6%;
+    right: 3.6%;
+  }
+
+  @include vp-767 {
+    top: 57%;
+    left: 5px;
+    right: 5px;
+  }
+}
+
+.slider-control__button {
+  padding: 0;
+  border: none;
+  background-color: transparent;
+
+  &--prev {
+    margin-left: 10px;
+  }
+
+  &--next {
+    margin-right: 10px;
+  }
+
+  @include vp-1199 {
+    width: 50px;
+    height: 50px;
+    margin: 0;
+  }
+
+  @include vp-767 {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+.slider-control__button svg {
+  @include vp-767 {
+    width: 10px;
+    height: 19px;
+  }
+}
+
+.slider-control__button--prev  svg {
+  transform: rotate(180deg);
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  display: none;
+}
+
+.swiper-button-next {
+  right: 0;
+  width: 16px;
+}
+
+.swiper-button-prev {
+  left: 0;
+  width: 16px;
+}

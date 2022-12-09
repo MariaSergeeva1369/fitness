@@ -3,9 +3,18 @@
 }
 
 .trainers__wrapper {
-  padding: 0 32px 91px;
+  padding: 0 4.9% 91px;
   width: 100%;
-  max-width: 1224px;
+  max-width: 1294px;
+  position: relative;
+
+  @include vp-1199 {
+    padding: 0 101px 100px;
+  }
+
+  @include vp-767 {
+    padding: 0 47px;
+  }
 }
 
 .trainers__title {
@@ -15,18 +24,29 @@
   font-size: 54px;
   line-height: 65px;
   letter-spacing: 0.03em;
+
+  @include vp-1199 {
+    display: flex;
+    justify-content: center;
+    font-size: 42px;
+    line-height: 50px;
+    margin: 0 0 32px -5px;
+  }
+
+  @include vp-767 {
+    font-size: 32px;
+    line-height: 38px;
+    margin-bottom: 42px;
+  }
 }
 
 .trainers__list {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 40px;
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-
-// .trainers__item h3 {
-// margin: 0;
-// }
+.trainers__slider {
+  max-width: 1160px;
+  width: 100%;
+}

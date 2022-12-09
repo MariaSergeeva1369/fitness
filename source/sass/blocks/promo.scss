@@ -12,7 +12,7 @@
   }
 
   @include vp-767 {
-    padding: 71px 15px;
+    padding: 71px 15px 64px;
   }
 }
 
@@ -26,7 +26,8 @@
   }
 
   @include vp-767 {
-    padding-top: 201.37%;
+    min-height: 584px;
+    padding-top: 134.68%;
   }
 }
 
@@ -50,7 +51,6 @@
   grid-template-rows: repeat(3, min-content);
   background-color: $color-torch-red;
   color: $color-default-white;
-  overflow: auto;
 
   @include vp-1199 {
     grid-template-rows: repeat(3, auto);
