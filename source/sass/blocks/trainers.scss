@@ -54,8 +54,8 @@
 .trainers__slider-control {
   position: absolute;
   top: 52%;
-  left: 0;
-  right: 0;
+  left: 5px;
+  right: 5px;
 
   @include vp-1199 {
     top: 43%;

@@ -8,13 +8,13 @@
   border: none;
   background-color: transparent;
 
-  &--prev {
-    margin-left: 5px;
-  }
+  // &--prev {
+  //   margin-left: 5px;
+  // }
 
-  &--next {
-    margin-right: 5px;
-  }
+  // &--next {
+  //   margin-right: 5px;
+  // }
 
   @include vp-1199 {
     width: 50px;

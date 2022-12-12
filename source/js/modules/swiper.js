@@ -10,8 +10,8 @@ if (sliderTrainersList) {
     loop: true,
 
     navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
+      nextEl: '.swiper-button-trainers-next',
+      prevEl: '.swiper-button-trainers-prev',
     },
 
     breakpoints: {
@@ -64,4 +64,6 @@ if (sliderFeedbackList) {
     },
 
   });
+
+  FeedbackSwiper.slideTo(1);
 }

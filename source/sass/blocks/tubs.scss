@@ -88,12 +88,11 @@
   }
 }
 
-.tubs__button {
+.tubs__title a {
   background-color: transparent;
   border: none;
 
   @include focus {
-    opacity: 0.6;
     border-radius: 2px;
     outline: 2px solid $color-crimson;
   }
