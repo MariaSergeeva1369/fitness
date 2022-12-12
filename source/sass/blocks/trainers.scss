@@ -13,7 +13,7 @@
   }
 
   @include vp-767 {
-    padding: 0 47px;
+    padding: 0 47px 70px;
   }
 }
 
@@ -49,4 +49,23 @@
 .trainers__slider {
   max-width: 1160px;
   width: 100%;
+}
+
+.trainers__slider-control {
+  position: absolute;
+  top: 52%;
+  left: 0;
+  right: 0;
+
+  @include vp-1199 {
+    top: 43%;
+    left: 3.6%;
+    right: 3.6%;
+  }
+
+  @include vp-767 {
+    top: 48%;
+    left: 5px;
+    right: 5px;
+  }
 }

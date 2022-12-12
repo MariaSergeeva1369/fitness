@@ -338,28 +338,28 @@
             <h2 class="features__title">Наши преимущества</h2>
             <ul class="features__list">
               <li class="features__item">
-                <p class="features__item-title">Площадь</p>
                 <p class="features__item-feature">900 <span>кв/м</span></p>
-                <p class="features__item-description">Занимайтесь без&nbsp;очередей и&nbsp;толпучки</p>
+                <p class="features__item-title">Площадь</p>
+                <p class="features__item-description">Занимайтесь&nbsp;без&nbsp;очередей и&nbsp;толпучки</p>
               </li>
               <li class="features__item">
-                <p class="features__item-title">Собственная парковка</p>
                 <p class="features__item-feature">70 <span>машин</span></p>
+                <p class="features__item-title">Собственная парковка</p>
                 <p class="features__item-description">Вы&nbsp;всегда найдете место для своей машины на&nbsp;нашей парковке</p>
               </li>
               <li class="features__item features__item--modified">
                 <p class="features__item-feature features__item-feature--modified">100</p>
                 <p class="features__item-title features__item-title--modified">Тренажеров</p>
-                <p class="features__item-description features__item-description--modified">Современные тренажеры на&nbsp;все группы мышц</p>
+                <p class="features__item-description features__item-description--modified">Современные тренажеры на&nbsp;все&nbsp;группы&nbsp;мышц</p>
               </li>
               <li class="features__item">
-                <p class="features__item-title">Комфорт</p>
                 <p class="features__item-feature">350<span>мест</span></p>
-                <p class="features__item-description">Просторные раздевалки, душевые, фен, Wi-Fi, кулеры</p>
+                <p class="features__item-title">Комфорт</p>
+                <p class="features__item-description">Просторные раздевалки, душевые,&nbsp;фен,&nbsp;Wi-Fi,&nbsp;кулеры</p>
               </li>
               <li class="features__item">
-                <p class="features__item-title">Тренерский опыт</p>
                 <p class="features__item-feature">5+ <span>лет</span></p>
+                <p class="features__item-title">Тренерский опыт</p>
                 <p class="features__item-description">Добивайтесь своих целей быстрее с&nbsp;профессиональным тренером</p>
               </li>
             </ul>
@@ -374,22 +374,24 @@
             <h2 class="discounts__title">Акции</h2>
             <ul class="discounts__list">
               <li class="discounts__item discounts__item--main">
-                <div class="discounts__item-text-container">
-                  <h3>Год <span>4999</span></h3>
-                  <p>Безлимитный абонемент в&nbsp;тренажерный зал</p>
-                  <a>подробнее</a>
+                <div class="discounts__item-wrapper">
+                  <div class="discounts__item-text-container">
+                    <h3>Год <span>4999</span></h3>
+                    <p>Безлимитный абонемент в&nbsp;тренажерный зал</p>
+                    <a href="#">подробнее</a>
+                  </div>
+                  <img src="./img/discount.webp" srcset="./img/discount@2x.webp" alt="Девушка на фоне неба" width="280" height="462">
                 </div>
-                <img src="./img/discount.webp" srcset="./img/discount@2x.webp" alt="Девушка на фоне неба" width="280" height="462">
               </li>
               <li class="discounts__item">
                 <h3>Месяц бесплатно</h3>
-                <p>Приведи друга, получи абонемент в&nbsp;подарок</p>
-                <a>подробнее</a>
+                <p>Приведи друга, получи абонемент&nbsp;в&nbsp;подарок</p>
+                <a href="#">подробнее</a>
               </li>
               <li class="discounts__item">
                 <h3>Скидка 20%</h3>
-                <p>Корпоративный фитнес  с&nbsp;командой</p>
-                <a>подробнее</a>
+                <p>Корпоративный фитнес с&nbsp;командой</p>
+                <a href="#">подробнее</a>
               </li>
             </ul>
           </div>
@@ -398,18 +400,35 @@
         <section class="feedback">
           <div class="feedback__wrapper container">
             <h2 class="feedback__title">Отзывы</h2>
-            <ul class="feedback__list">
-              <li>
-                <img src="./img/comment.webp" srcset="./img/comment@2x.webp" alt="Анна Орлова" width="80" height="80">
-                <p>Анна Орлова</p>
-                <p>&laquo;Хожу в&nbsp;SuperClub уже больше года. Нравится, что в&nbsp;клубе всегда чисто, тренажеры обновляют, персонал дружелюбный. Зал просторный, даже в&nbsp;вечернее время нет очередей&raquo;</p>
-              </li>
-              <li>
-                <img src="./img/comment.webp" srcset="./img/comment@2x.webp" alt="Анна Орлова" width="80" height="80">
-                <p>Мария Петрова</p>
-                <p>&laquo;Хожу в&nbsp;SuperClub уже больше года. Нравится, что в&nbsp;клубе всегда чисто, тренажеры обновляют, персонал дружелюбный. Зал просторный, даже в&nbsp;вечернее время нет очередей&raquo;</p>
-              </li>
-            </ul>
+            <div class="feedback__slider swiper swiper-feedback" data-swiper-feedback>
+              <ul class="feedback__list swiper-wrapper">
+                <li class="feedback__item swiper-slide">
+                  <img src="./img/comment.webp" srcset="./img/comment@2x.webp" alt="Анна Орлова" width="80" height="80">
+                  <p>Анна Орлова</p>
+                  <p>&laquo;Хожу в&nbsp;SuperClub уже больше года. Нравится, что в&nbsp;клубе всегда чисто, тренажеры обновляют, персонал дружелюбный. Зал просторный, даже в&nbsp;вечернее время нет очередей&raquo;</p>
+                </li>
+                <li class="feedback__item swiper-slide">
+                  <img src="./img/comment.webp" srcset="./img/comment@2x.webp" alt="Анна Орлова" width="80" height="80">
+                  <p>Мария Петрова</p>
+                  <p>&laquo;Хожу в&nbsp;SuperClub уже больше года. Нравится, что в&nbsp;клубе всегда чисто, тренажеры обновляют, персонал дружелюбный. Зал просторный, даже в&nbsp;вечернее время нет очередей&raquo;</p>
+                </li>
+              </ul>
+
+              <div class="feedback__slider-control slider-control">
+                <button class="slider-control__button slider-control__button--prev swiper-button-feedback-prev" type="button">
+                  <svg width="16" height="32" aria-hidden="true" focusable="false">
+                    <use xlink:href="img/sprite.svg#arrow"></use>
+                  </svg>
+                  <span class="visually-hidden">Назад</span>
+                </button>
+                <button class="slider-control__button slider-control__button--next swiper-button-feedback-next" type="button">
+                  <svg width="16" height="32" aria-hidden="true" focusable="false">
+                    <use xlink:href="img/sprite.svg#arrow"></use>
+                  </svg>
+                  <span class="visually-hidden">Вперед</span>
+                </button>
+              </div>
+            </div>
           </div>
         </section>
 

@@ -20,13 +20,14 @@
 
   @include hover-focus {
     border: 7px solid;
-    border-image: linear-gradient(97.05deg, #ED0233 17.6%, #003EB7 95.31%);
+    border-image-source: linear-gradient(148.82deg, #D10A42 0.85%, #00359F 100%);
     border-image-slice: 1;
+    outline: none;
   }
 
   &:focus-within {
     border: 7px solid;
-    border-image: linear-gradient(97.05deg, #ED0233 17.6%, #003EB7 95.31%);
+    border-image-source: linear-gradient(148.82deg, #D10A42 0.85%, #00359F 100%);
     border-image-slice: 1;
   }
 }
@@ -132,6 +133,7 @@
     background: linear-gradient(97.05deg, #ED0233 17.6%, #003EB7 95.31%);
     color: $color-default-white;
     opacity: 0.8;
+    min-height: 64px;
   }
 }
 

@@ -1,22 +1,6 @@
 .slider-control {
-  position: absolute;
-  top: 52%;
-  left: 0;
-  right: 0;
   display: flex;
   justify-content: space-between;
-
-  @include vp-1199 {
-    top: 43%;
-    left: 3.6%;
-    right: 3.6%;
-  }
-
-  @include vp-767 {
-    top: 57%;
-    left: 5px;
-    right: 5px;
-  }
 }
 
 .slider-control__button {
@@ -25,11 +9,11 @@
   background-color: transparent;
 
   &--prev {
-    margin-left: 10px;
+    margin-left: 5px;
   }
 
   &--next {
-    margin-right: 10px;
+    margin-right: 5px;
   }
 
   @include vp-1199 {
@@ -41,6 +25,15 @@
   @include vp-767 {
     width: 30px;
     height: 30px;
+  }
+
+  @include hover {
+    opacity: 0.5;
+  }
+
+  @include focus {
+    border-radius: 4px;
+    outline: 2px solid $color-crimson;
   }
 }
 
@@ -62,10 +55,8 @@
 
 .swiper-button-next {
   right: 0;
-  width: 16px;
 }
 
 .swiper-button-prev {
   left: 0;
-  width: 16px;
 }

@@ -1,10 +1,12 @@
 import Swiper, {Navigation} from 'swiper';
 Swiper.use([Navigation]);
 
-const sliderList = document.querySelector(['.swiper']);
+const sliderTrainersList = document.querySelector('.swiper');
+const sliderFeedbackList = document.querySelector('.swiper-feedback');
 
-if (sliderList) {
-  const mySwiper = new Swiper(sliderList, {
+
+if (sliderTrainersList) {
+  const mySwiper = new Swiper(sliderTrainersList, {
     loop: true,
 
     navigation: {
@@ -36,9 +38,9 @@ if (sliderList) {
   });
 
   const toSlide = () => {
-    if (sliderList && window.innerWidth <= 1199 && window.innerWidth >= 768) {
+    if (sliderTrainersList && window.innerWidth <= 1199 && window.innerWidth >= 768) {
       mySwiper.slideTo(4);
-    } else if (sliderList && window.innerWidth <= 767) {
+    } else if (sliderTrainersList && window.innerWidth <= 767) {
       mySwiper.slideTo(3);
     }
   };
@@ -48,5 +50,18 @@ if (sliderList) {
   window.addEventListener('resize', () => {
     toSlide();
   });
+}
 
+if (sliderFeedbackList) {
+  const FeedbackSwiper = new Swiper(sliderFeedbackList, {
+    slidesPerView: 1,
+    spaceBetween: 40,
+    loop: true,
+
+    navigation: {
+      nextEl: '.swiper-button-feedback-next',
+      prevEl: '.swiper-button-feedback-prev',
+    },
+
+  });
 }
