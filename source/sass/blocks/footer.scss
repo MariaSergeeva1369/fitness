@@ -1,0 +1,34 @@
+.footer {
+  background-color: $color-black-russian;
+  min-width: 320px;
+}
+
+.footer__wrapper {
+  padding: 41px 32px 23px;
+  max-width: 1224px;
+  display: grid;
+  grid-template-columns: min-content auto auto;
+  gap: 40px;
+  justify-items: end;
+
+  @include vp-1199 {
+    padding: 45px 39px 38px 45px;
+    gap: 30px;
+  }
+
+  @include vp-767 {
+    padding: 44px 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 35px;
+  }
+}
+
+.footer__logo {
+  padding-top: 2px;
+
+  @include vp-767 {
+    position: absolute;
+  }
+}

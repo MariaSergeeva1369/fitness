@@ -1,0 +1,37 @@
+.contacts {
+  min-width: 320px;
+  background: linear-gradient( to right, $color-sapphire 0%, $color-sapphire 50%,$color-default-white 50%, $color-default-white 100%);
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 50%;
+    height: 1px;
+    background-color: #74819c;
+  }
+
+  @include vp-1199 {
+    background: none;
+
+    &::after {
+      display: none;
+    }
+  }
+}
+
+.contacts__wrapper {
+  padding: 56px 64px 64px;
+  max-width: 1288px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  @include vp-1199 {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}

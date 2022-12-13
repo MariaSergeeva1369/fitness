@@ -1,0 +1,128 @@
+.contacts-block {
+  margin: 0 0 0 auto;
+  display: flex;
+  flex-direction: column;
+
+  @include vp-1199 {
+    margin: 0;
+    padding: 60px 103px 62px 133px;
+    width: 100%;
+    align-items: center;
+  }
+
+  @include vp-767 {
+    padding: 65px 15px 61px;
+  }
+}
+
+.contacts-block__title {
+  margin: 0 0 40px;
+  font-family: $ff-alumni;
+  font-weight: 600;
+  font-size: 54px;
+  line-height: 65px;
+  letter-spacing: 0.03em;
+
+  @include vp-1199 {
+    margin: 0 0 34px -390px;
+    font-size: 42px;
+    line-height: 50px;
+  }
+
+  @include vp-767 {
+    margin: 0 0 34px;
+    align-self: baseline;
+    font-size: 32px;
+    line-height: 38px;
+  }
+}
+
+.contacts-block__list {
+  margin: 0;
+  padding: 0 0 0 4px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, auto);
+  gap: 18px 117px;
+  list-style: none;
+  position: relative;
+  max-width: 460px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 4px;
+    bottom: 6px;
+    left: 50.8%;
+    width: 1px;
+    background-color: #74819C;
+  }
+
+  @include vp-1199 {
+    padding: 0;
+    gap: 19px 94px;
+    width: 532px;
+    max-width: none;
+
+    &::before {
+      top: 8px;
+      bottom: 7px;
+      left: 50%;
+    }
+  }
+
+  @include vp-767 {
+    width: 100%;
+    max-width: none;
+    display: flex;
+    flex-direction: column;
+
+    &::before {
+      display: none;
+    }
+  }
+}
+
+.contacts-block__item {
+  &:nth-child(2) {
+    grid-area: 2 / 1 / 3 / 2 ;
+  }
+}
+
+.contacts-block__item-title {
+  margin: 0 0 6px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+
+  @include vp-1199 {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+.contacts-block__item-description {
+  margin: 0;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+
+  @include vp-1199 {
+    font-size: 18px;
+    line-height: 27px;
+  }
+}
+
+.contacts-block__item-description a {
+  color: $color-sapphire;
+
+  @include hover {
+    opacity: 0.5;
+  }
+
+  @include focus {
+    opacity: 0.8;
+    border-radius: 2px;
+    outline: 2px solid $color-crimson;
+  }
+}
