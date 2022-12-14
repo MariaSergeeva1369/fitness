@@ -40,7 +40,9 @@ function onPhoneChange(evt) {
       formButton.setAttribute('disabled', 'disabled');
       phoneInvalidMassage.textContent = 'Введите номер полностью';
       phoneLabel.append(phoneInvalidMassage);
+      phoneInput.classList.add('is-invalid');
     } else if (phoneInvalidMassage) {
+      phoneInput.classList.remove('is-invalid');
       formButton.removeAttribute('disabled');
       phoneLabel.removeChild(phoneInvalidMassage);
     }
@@ -49,7 +51,9 @@ function onPhoneChange(evt) {
       formButton.setAttribute('disabled', 'disabled');
       phoneInvalidMassage.textContent = 'Введите номер полностью';
       phoneLabel.append(phoneInvalidMassage);
+      phoneInput.classList.add('is-invalid');
     } else if (phoneInvalidMassage) {
+      phoneInput.classList.remove('is-invalid');
       formButton.removeAttribute('disabled');
       phoneLabel.removeChild(phoneInvalidMassage);
     }
@@ -66,6 +70,5 @@ const validatePhoneInput = () => {
     }
   }
 };
-
 
 export {validatePhoneInput};

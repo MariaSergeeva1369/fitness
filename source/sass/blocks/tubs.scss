@@ -31,8 +31,7 @@
   line-height: 30px;
   color: rgba(16, 38, 84, 0.5);
 
-
-  &:nth-child(2){
+  &:nth-child(2) {
     padding: 0 46px;
   }
 
@@ -55,7 +54,7 @@
     line-height: 27px;
 
 
-    &:nth-child(2){
+    &:nth-child(2) {
       padding: 0 54px;
     }
   }
@@ -65,14 +64,13 @@
     line-height: 24px;
     padding-bottom: 15px;
 
-    &:nth-child(2){
+    &:nth-child(2) {
       padding: 0 45px 0 38px;
     }
 
-    &:nth-child(1){
+    &:nth-child(1) {
       padding-right: 7px;
     }
-
   }
 }
 
@@ -116,6 +114,7 @@
   gap: 40px;
   width: 100%;
   justify-items: stretch;
+  overflow: auto;
 
   @include vp-1199 {
     grid-template-columns: 1fr;

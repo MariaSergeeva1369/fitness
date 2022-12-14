@@ -55,7 +55,7 @@
     bottom: 6px;
     left: 50.8%;
     width: 1px;
-    background-color: #74819C;
+    background-color: #74819c;
   }
 
   @include vp-1199 {
@@ -85,7 +85,7 @@
 
 .contacts-block__item {
   &:nth-child(2) {
-    grid-area: 2 / 1 / 3 / 2 ;
+    grid-area: 2 / 1 / 3 / 2;
   }
 }
 

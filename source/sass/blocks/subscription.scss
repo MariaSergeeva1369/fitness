@@ -18,7 +18,7 @@
     right: 0;
     width: 288px;
     height: 415px;
-    background-image: url('../img/background-layer-dumbbells-desktop.webp');
+    background-image: url("../img/background-layer-dumbbells-desktop.webp");
     background-repeat: no-repeat;
     z-index: -1;
     background-size: cover;
@@ -28,12 +28,12 @@
     padding: 100px 163px;
 
     &::after {
-      background-image: url('../img/background-layer-dumbbells.webp');
+      background-image: url("../img/background-layer-dumbbells.webp");
       bottom: -95px;
       width: 348px;
 
       @include retina {
-        background-image: url('../img/background-layer-dumbbells@2x.webp');
+        background-image: url("../img/background-layer-dumbbells@2x.webp");
       }
     }
   }

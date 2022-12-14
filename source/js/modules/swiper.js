@@ -56,14 +56,13 @@ if (sliderFeedbackList) {
   const FeedbackSwiper = new Swiper(sliderFeedbackList, {
     slidesPerView: 1,
     spaceBetween: 40,
-    loop: true,
+    loop: false,
 
     navigation: {
       nextEl: '.swiper-button-feedback-next',
       prevEl: '.swiper-button-feedback-prev',
     },
-
   });
 
-  FeedbackSwiper.slideTo(1);
+  FeedbackSwiper.slideTo(0);
 }

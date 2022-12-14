@@ -22,7 +22,7 @@
   position: relative;
 }
 
-.form label span {
+.form span {
   position: absolute;
   bottom: -20px;
   left: 0;
@@ -37,7 +37,7 @@
   background-color: transparent;
   color: $color-default-white;
   outline: none;
-  border-bottom: 1px solid #74819C;
+  border-bottom: 1px solid #74819c;
   font-weight: 400;
   font-size: 14px;
   line-height: 16px;
@@ -48,6 +48,10 @@
 
   &:focus::placeholder {
     opacity: 0.5;
+  }
+
+  &.is-invalid {
+    border-color: $color-crimson;
   }
 
   @include hover {

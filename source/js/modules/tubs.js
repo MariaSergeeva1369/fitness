@@ -1,7 +1,6 @@
 const tubsTitles = document.querySelectorAll('[data-tubs-title]');
 const tubsContent = document.querySelectorAll('[data-tubs-list]');
 
-
 const removeNojsClass = (elements) => {
   if (elements.length >= 1) {
     elements.forEach((element) => {
@@ -31,4 +30,3 @@ const selectTab = () => {
 };
 
 export {selectTab, removeNojsClass, tubsContent, tubsTitles};
-

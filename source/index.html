@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="css/style.min.css">
     <link rel="preload" href="fonts/AlumniSans-SemiBold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
     <link rel="preload" href="fonts/RobotoCondensed-Regular.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" href="img/svg/favicon.svg" type="image/svg+xml">
   </head>
   <body>
     <div class="wrapper">
@@ -68,10 +70,10 @@
               <div class="about__video-wrapper">
                 <div class="about__video video is-enebled" data-video>
                   <a class="video__link" href="https://www.youtube.com/embed/9TZXsZItgdw" data-video-link>
-                    <img class="video__media" src="./img/video/video-cover.webp" srcset="./img/video/video-cover@2x.webp" alt="Обзор тренажерного зала" data-video-media>
+                    <img class="video__media" src="./img/video/video-cover.webp" srcset="./img/video/video-cover@2x.webp" alt="Обзор тренажерного зала" width="364" height="228" data-video-media>
                   </a>
                   <button class="video__button" aria-label="Запустить видео" data-video-button>
-                    <svg class="video__icon" width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg class="video__icon" width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
                       <circle class="video__icon-circle-big" cx="50" cy="50" r="49" stroke="url(#paint0_linear_7653_167)" stroke-opacity="0.2" stroke-width="2"/>
                       <circle class="video__icon-circle-small" cx="50" cy="50" r="36" fill="url(#paint1_linear_7653_167)"/>
                       <path d="M59 49.5L46.25 56.8612L46.25 42.1388L59 49.5Z" fill="white"/>
@@ -88,7 +90,6 @@
                     </svg>
                   </button>
                 </div>
-
               </div>
             </div>
           </div>
@@ -266,7 +267,7 @@
                   </div>
                 </li>
                 <li class="trainers__item trainer-card swiper-slide">
-                  <img src="./img/trainer-alexei.webp" srcset="./img/trainer-alexei@2x.webp" alt="Тренер Алексей Лавров" width="260" height="294">
+                  <img src="./img/trainer-alexei.webp" srcset="./img/trainer-alexei@2x.webp" alt="Тренер Михаил Петров" width="260" height="294">
                   <h3>Михаил Петров</h3>
                   <div class="trainer-card__content-wrapper">
                     <span>CrossFit</span>
@@ -278,7 +279,7 @@
                   </div>
                 </li>
                 <li class="trainers__item trainer-card swiper-slide">
-                  <img src="./img/trainer-anna.webp" srcset="./img/trainer-anna@2x.webp" alt="Тренер Анна Павлова" width="260" height="294">
+                  <img src="./img/trainer-anna.webp" srcset="./img/trainer-anna@2x.webp" alt="Тренер Юлия Гаврилова" width="260" height="294">
                   <h3>Юлия Гаврилова</h3>
                   <div class="trainer-card__content-wrapper">
                     <span>Fitness</span>
@@ -290,7 +291,7 @@
                   </div>
                 </li>
                 <li class="trainers__item trainer-card swiper-slide">
-                  <img src="./img/trainer-maria.webp" srcset="./img/trainer-maria@2x.webp" alt="Тренер Мария Кетова" width="260" height="294">
+                  <img src="./img/trainer-maria.webp" srcset="./img/trainer-maria@2x.webp" alt="Тренер Екатерина Иванова" width="260" height="294">
                   <h3>Екатерина Иванова</h3>
                   <div class="trainer-card__content-wrapper">
                     <span>CrossFit</span>
@@ -302,7 +303,7 @@
                   </div>
                 </li>
                 <li class="trainers__item trainer-card swiper-slide">
-                  <img src="./img/trainer-alexander.webp" srcset="./img/trainer-alexander@2x.webp" alt="Тренер Александр Пашков" width="260" height="294">
+                  <img src="./img/trainer-alexander.webp" srcset="./img/trainer-alexander@2x.webp" alt="Тренер Андрей Гребешков" width="260" height="294">
                   <h3>Андрей Гребешков</h3>
                   <div class="trainer-card__content-wrapper">
                     <span>CrossFit</span>
@@ -408,7 +409,7 @@
                   <p>&laquo;Хожу в&nbsp;SuperClub уже больше года. Нравится, что в&nbsp;клубе всегда чисто, тренажеры обновляют, персонал дружелюбный. Зал просторный, даже в&nbsp;вечернее время нет очередей&raquo;</p>
                 </li>
                 <li class="feedback__item swiper-slide">
-                  <img src="./img/comment.webp" srcset="./img/comment@2x.webp" alt="Анна Орлова" width="80" height="80">
+                  <img src="./img/comment.webp" srcset="./img/comment@2x.webp" alt="Мария Петрова" width="80" height="80">
                   <p>Мария Петрова</p>
                   <p>&laquo;Хожу в&nbsp;SuperClub уже больше года. Нравится, что в&nbsp;клубе всегда чисто, тренажеры обновляют, персонал дружелюбный. Зал просторный, даже в&nbsp;вечернее время нет очередей&raquo;</p>
                 </li>
@@ -479,9 +480,9 @@
 
       <footer class="footer">
         <div class="footer__wrapper container">
-          <div class="footer__logo logo logo--small">
+          <div class="footer__logo logo">
             <a class="logo__link">
-              <svg class="logo__icon" width="88" height="32" role="img" aria-label="Логотип SUPERGYM">
+              <svg class="logo__icon logo__icon--small" width="88" height="32" role="img" aria-label="Логотип SUPERGYM">
                 <use xlink:href="img/sprite.svg#logo"></use>
               </svg>
             </a>

@@ -20,14 +20,14 @@
 
   @include hover-focus {
     border: 7px solid;
-    border-image-source: linear-gradient(148.82deg, #D10A42 0.85%, #00359F 100%);
+    border-image-source: $crimson-to-smalt;
     border-image-slice: 1;
     outline: none;
   }
 
   &:focus-within {
     border: 7px solid;
-    border-image-source: linear-gradient(148.82deg, #D10A42 0.85%, #00359F 100%);
+    border-image-source: $crimson-to-smalt;
     border-image-slice: 1;
   }
 }
@@ -130,7 +130,7 @@
   @include hover-focus {
     outline: none;
     border: none;
-    background: linear-gradient(97.05deg, #ED0233 17.6%, #003EB7 95.31%);
+    background: $crimson-to-smalt;
     color: $color-default-white;
     opacity: 0.8;
     min-height: 64px;
@@ -141,7 +141,7 @@
 .card:focus a {
   outline: none;
   border: none;
-  background: linear-gradient(97.05deg, #ED0233 17.6%, #003EB7 95.31%);
+  background: $crimson-to-smalt;
   color: $color-default-white;
   min-height: 64px;
 }

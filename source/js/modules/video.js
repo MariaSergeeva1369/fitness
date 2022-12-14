@@ -14,7 +14,6 @@ function setupVideo(video) {
   const link = video.querySelector('[data-video-link]');
   const button = video.querySelector('[data-video-button]');
 
-
   video.addEventListener('click', () => {
     const iframe = createIframe(MEDIA);
 
