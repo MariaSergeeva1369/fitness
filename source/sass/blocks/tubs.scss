@@ -31,7 +31,7 @@
   line-height: 30px;
   color: rgba(16, 38, 84, 0.5);
 
-  &:nth-child(2) {
+  &--center {
     padding: 0 46px;
   }
 
@@ -54,7 +54,7 @@
     line-height: 27px;
 
 
-    &:nth-child(2) {
+    &--center {
       padding: 0 54px;
     }
   }
@@ -64,11 +64,11 @@
     line-height: 24px;
     padding-bottom: 15px;
 
-    &:nth-child(2) {
+    &--center {
       padding: 0 45px 0 38px;
     }
 
-    &:nth-child(1) {
+    &:first-child {
       padding-right: 7px;
     }
   }
