@@ -16,28 +16,8 @@
   }
 }
 
-.promo__promo-block-wrapper {
-  padding-top: 43.11%;
-  position: relative;
-  width: 100%;
-
-  @include vp-1199 {
-    padding-top: 43.06%;
-  }
-
-  @include vp-767 {
-    min-height: 584px;
-    padding-top: 134.68%;
-  }
-}
-
 .promo__promo-block {
   display: flex;
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
 
   @include vp-767 {
     flex-direction: column;
@@ -51,7 +31,6 @@
   grid-template-rows: repeat(3, min-content);
   background-color: $color-torch-red;
   color: $color-default-white;
-  overflow: auto;
 
   @include vp-1199 {
     grid-template-rows: repeat(3, auto);
@@ -220,6 +199,7 @@
   min-height: 67px;
   outline: none;
   cursor: pointer;
+  user-select: none;
 
   grid-area: 3 / 1 / -1 / -1;
 

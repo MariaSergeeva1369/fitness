@@ -9,30 +9,23 @@
 }
 
 .tubs__title-list {
+  position: relative;
   display: flex;
+  gap: 46px;
+  justify-content: center;
   margin: 0 0 38px;
   padding: 0;
   list-style-type: none;
 
   @include vp-1199 {
     margin-bottom: 45px;
+    gap: 54px;
   }
 
   @include vp-767 {
     margin-bottom: 35px;
-  }
-}
-
-.tubs__title {
-  position: relative;
-  margin: 0;
-  padding-bottom: 13px;
-  font-size: 20px;
-  line-height: 30px;
-  color: rgba(16, 38, 84, 0.5);
-
-  &--center {
-    padding: 0 46px;
+    gap: 45px;
+    flex-wrap: wrap;
   }
 
   &::after {
@@ -44,6 +37,15 @@
     height: 2px;
     background-color: rgba(120, 120, 120, 0.2);
   }
+}
+
+.tubs__title {
+  position: relative;
+  margin: 0;
+  padding-bottom: 13px;
+  font-size: 20px;
+  line-height: 30px;
+  color: rgba(16, 38, 84, 0.5);
 
   @include hover {
     opacity: 0.6;
@@ -52,37 +54,34 @@
   @include vp-1199 {
     font-size: 18px;
     line-height: 27px;
-
-
-    &--center {
-      padding: 0 54px;
-    }
   }
 
   @include vp-767 {
     font-size: 16px;
     line-height: 24px;
     padding-bottom: 15px;
-
-    &--center {
-      padding: 0 45px 0 38px;
-    }
-
-    &:first-child {
-      padding-right: 7px;
-    }
   }
 }
 
 .tubs__title.is-active {
   &::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    height: 2px;
     background-color: $color-crimson;
+
+    @include vp-767 {
+      min-width: 60px;
+    }
   }
 }
 
 .tubs__title.is-nojs {
   &::after {
-    background-color: rgba(120, 120, 120, 0.2);
+    background-color: transparent;
   }
 }
 
@@ -101,13 +100,21 @@
 }
 
 .tubs__content-list {
+  padding: 0;
   display: none;
+
+  @include vp-1199 {
+    padding: 0 118px;
+  }
+
+  @include vp-767 {
+    padding: 0;
+  }
 }
 
 .tubs__content-list.is-active,
 .tubs__content-list.is-nojs {
   margin: 0;
-  padding: 0;
   list-style: none;
   display: grid;
   grid-template-columns: repeat(3, 1fr);

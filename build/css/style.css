@@ -1556,6 +1556,10 @@ button,
   line-height: 14px;
   letter-spacing: 0.05em;
   text-transform: uppercase;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
   background-color: transparent;
   border: 4px solid #ffffff;
   cursor: pointer;
@@ -1801,7 +1805,7 @@ button,
 
 .about__video-wrapper {
   position: absolute;
-  bottom: -114px;
+  top: 288px;
   left: -63px;
 }
 
@@ -1835,6 +1839,7 @@ button,
   border: none;
   outline: none;
   display: none;
+  cursor: pointer;
 }
 
 .video.is-enebled .video__button {
@@ -1919,12 +1924,27 @@ button,
 }
 
 .tubs__title-list {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  gap: 46px;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   margin: 0 0 38px;
   padding: 0;
   list-style-type: none;
+}
+
+.tubs__title-list::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  background-color: rgba(120, 120, 120, 0.2);
 }
 
 .tubs__title {
@@ -1936,26 +1956,18 @@ button,
   color: rgba(16, 38, 84, 0.5);
 }
 
-.tubs__title--center {
-  padding: 0 46px;
-}
-
-.tubs__title::after {
+.tubs__title.is-active::after {
   content: "";
   position: absolute;
   right: 0;
   left: 0;
   bottom: 0;
   height: 2px;
-  background-color: rgba(120, 120, 120, 0.2);
-}
-
-.tubs__title.is-active::after {
   background-color: #d10a42;
 }
 
 .tubs__title.is-nojs::after {
-  background-color: rgba(120, 120, 120, 0.2);
+  background-color: transparent;
 }
 
 .tubs__title a {
@@ -1973,13 +1985,13 @@ button,
 }
 
 .tubs__content-list {
+  padding: 0;
   display: none;
 }
 
 .tubs__content-list.is-active,
 .tubs__content-list.is-nojs {
   margin: 0;
-  padding: 0;
   list-style: none;
   display: -ms-grid;
   display: grid;
@@ -2101,6 +2113,10 @@ button,
   line-height: 12px;
   letter-spacing: 0.05em;
   text-transform: uppercase;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
   cursor: pointer;
 }
 
@@ -2134,21 +2150,10 @@ button,
   max-width: 1224px;
 }
 
-.promo__promo-block-wrapper {
-  padding-top: 43.11%;
-  position: relative;
-  width: 100%;
-}
-
 .promo__promo-block {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
 }
 
 .promo__promo-block-content {
@@ -2163,7 +2168,6 @@ button,
   grid-template-rows: repeat(3, min-content);
   background-color: #ed0233;
   color: #ffffff;
-  overflow: auto;
 }
 
 .promo__promo-block-content p {
@@ -2290,6 +2294,10 @@ button,
   min-height: 67px;
   outline: none;
   cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
   grid-area: 3/1/-1/-1;
 }
 
@@ -2376,8 +2384,8 @@ button,
 }
 
 .trainer-card__content-wrapper ul {
-  margin: 0;
-  padding: 0 0 0 71px;
+  margin: 0 0 20px;
+  padding: 0 30px 0 71px;
   list-style: none;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2416,7 +2424,13 @@ button,
   margin-bottom: 34px;
 }
 
-.trainer-card:hover::after {
+.trainer-card:hover,
+.trainer-card:focus {
+  outline: none;
+}
+
+.trainer-card:hover::after,
+.trainer-card:focus::after {
   content: "";
   position: absolute;
   top: 0;
@@ -2430,18 +2444,21 @@ button,
   z-index: 0;
 }
 
-.trainer-card:hover h3 {
+.trainer-card:hover h3,
+.trainer-card:focus h3 {
   top: 51px;
   z-index: 10;
 }
 
-.trainer-card:hover img {
+.trainer-card:hover img,
+.trainer-card:focus img {
   -webkit-transform: matrix(-1, 0, 0, 1, 0, 0);
   -ms-transform: matrix(-1, 0, 0, 1, 0, 0);
   transform: matrix(-1, 0, 0, 1, 0, 0);
 }
 
-.trainer-card:hover .trainer-card__content-wrapper {
+.trainer-card:hover .trainer-card__content-wrapper,
+.trainer-card:focus .trainer-card__content-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2456,8 +2473,10 @@ button,
   top: 74px;
   right: 0;
   left: 0;
+  bottom: 0;
   z-index: 10;
   color: #ffffff;
+  overflow: auto;
 }
 
 .slider-control {
@@ -2859,6 +2878,12 @@ button,
 }
 
 .feedback__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -3054,6 +3079,11 @@ button,
   background-color: transparent;
   color: #ffffff;
   border: 3px solid #ffffff;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
   -ms-grid-row: 2;
   -ms-grid-row-span: 1;
   grid-area: 2/1/3/-1;
@@ -3377,7 +3407,7 @@ button,
   }
 
   .about__video-wrapper {
-    bottom: -83px;
+    top: 262px;
     left: 205px;
   }
 
@@ -3393,7 +3423,7 @@ button,
   }
 
   .subscription__wrapper {
-    padding: 100px 163px;
+    padding: 100px 45px;
   }
 
   .subscription__wrapper::after {
@@ -3410,6 +3440,7 @@ button,
 
   .tubs__title-list {
     margin-bottom: 45px;
+    gap: 54px;
   }
 
   .tubs__title {
@@ -3417,8 +3448,8 @@ button,
     line-height: 27px;
   }
 
-  .tubs__title--center {
-    padding: 0 54px;
+  .tubs__content-list {
+    padding: 0 118px;
   }
 
   .tubs__content-list.is-active,
@@ -3433,10 +3464,6 @@ button,
 
   .promo__wrapper {
     padding: 100px 45px;
-  }
-
-  .promo__promo-block-wrapper {
-    padding-top: 43.06%;
   }
 
   .promo__promo-block-content {
@@ -3548,7 +3575,8 @@ button,
     margin-left: -6px;
   }
 
-  .trainer-card:hover h3 {
+  .trainer-card:hover h3,
+  .trainer-card:focus h3 {
     margin-left: -5px;
   }
 
@@ -3961,6 +3989,9 @@ button,
 
   .tubs__title-list {
     margin-bottom: 35px;
+    gap: 45px;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
   }
 
   .tubs__title {
@@ -3969,12 +4000,12 @@ button,
     padding-bottom: 15px;
   }
 
-  .tubs__title--center {
-    padding: 0 45px 0 38px;
+  .tubs__title.is-active::after {
+    min-width: 60px;
   }
 
-  .tubs__title:first-child {
-    padding-right: 7px;
+  .tubs__content-list {
+    padding: 0;
   }
 
   .tubs__content-list.is-active,
@@ -4016,11 +4047,6 @@ button,
 
   .promo__wrapper {
     padding: 71px 15px 64px;
-  }
-
-  .promo__promo-block-wrapper {
-    min-height: 584px;
-    padding-top: 134.68%;
   }
 
   .promo__promo-block {
@@ -4082,12 +4108,14 @@ button,
     margin-left: 0;
   }
 
-  .trainer-card:hover h3 {
+  .trainer-card:hover h3,
+  .trainer-card:focus h3 {
     top: 41px;
     margin: 0;
   }
 
-  .trainer-card:hover .trainer-card__content-wrapper {
+  .trainer-card:hover .trainer-card__content-wrapper,
+  .trainer-card:focus .trainer-card__content-wrapper {
     top: 64px;
   }
 

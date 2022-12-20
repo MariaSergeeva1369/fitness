@@ -129,11 +129,11 @@
 
 .about__video-wrapper {
   position: absolute;
-  bottom: -114px;
+  top: 288px;
   left: -63px;
 
   @include vp-1199 {
-    bottom: -83px;
+    top: 262px;
     left: 205px;
   }
 
