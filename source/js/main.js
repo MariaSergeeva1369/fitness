@@ -4,6 +4,7 @@ import {findVideos} from './modules/video';
 import {selectTab, removeNojsClass, tubsContent, tubsTitles} from './modules/tubs';
 import './modules/swiper';
 import {validatePhoneInput} from './modules/form-validation';
+import {setFeedbackListHeight} from './modules/feedback';
 
 
 // ---------------------------------
@@ -27,6 +28,7 @@ window.addEventListener('DOMContentLoaded', () => {
     removeNojsClass(tubsTitles);
     removeNojsClass(tubsContent);
     validatePhoneInput();
+    setFeedbackListHeight();
   });
 });
 
